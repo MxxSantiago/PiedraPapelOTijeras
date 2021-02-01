@@ -1,0 +1,134 @@
+@import 'variables';
+
+#contenedor_tablero{
+    width: 100%;
+
+    #tablero{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        background-color: rgb(14, 13, 13);
+        width: 900px;
+        height: 250px;
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid rgb(255, 238, 2);
+        border-radius: 20px;
+        box-shadow: -7px 10px 29px -1px rgba(0,0,0,0.6);
+
+        @include phone{
+            margin-top: 10px;
+            width: 95%;
+            height: 130px;
+        }
+
+        @include tablet{
+            width: 90%;
+            height: 220px;
+            margin-top: 100px;
+        }
+
+        #tablero_jugador{
+            border-right: 1px solid rgb(47, 47, 47);
+        }
+
+        #tablero_jugador, #tablero_bot{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p{
+                color: rgb(255, 255, 0);
+                font-family: bd-geminis,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 60px;
+                margin-bottom: 15px;
+
+                @include phone{
+                    font-size: 50px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            h2{
+                color: rgb(255, 255, 0);
+                font-size: 40px;
+                font-family: lores-9-plus-wide-bold-alt, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+
+                @include phone{
+                    font-size: 25px;
+                }
+
+                @include tablet{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+#contenedor_mensaje{
+    background-color:rgb(59, 59, 59);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 850px;
+    height: 50px;
+    border: 5px solid rgb(14, 13, 13);
+    border-top: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: -7px 2px 29px -1px rgba(0,0,0,0.6);
+
+
+    @include tablet{
+        width: 80%;
+    }
+    @include phone{
+        width: 80%;
+    }
+
+    p{
+        color: #fff;
+        font-family: lores-9-plus-wide-bold-alt, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+.animacion{
+    animation-name: animacionPuntaje;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}   
+
+@keyframes animacionPuntaje{
+    0%{
+        opacity: 0;
+    }
+    49%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 100%;
+    }
+    60%{
+        opacity: 100%;
+    }
+    61%{
+        opacity: 0;
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,mBAAmB,AAAA,CACf,MAAM,CAAE,eAAe,CAC1B",
+    "sources": [
+        "../scss/tablero.scss"
+    ],
+    "names": [],
+    "file": "tablero.css"
+}
